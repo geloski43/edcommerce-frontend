@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "dev": "vinxi dev --port 8000",
-    "build": "vinxi build && mkdir -p .output/server && cp instrument.server.mjs .output/server",
-    "start": "node --import ./.output/server/instrument.server.mjs .output/server/index.mjs"
+    "build": "vinxi build",
+    "start": "vinxi start"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.49.0",
