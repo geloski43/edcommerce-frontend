@@ -69,7 +69,7 @@ function ProductDetailComponent() {
   // 2. Unpacking Strapi Data Logic
   const STRAPI_BASE_URL =
     import.meta.env.VITE_STRAPI_URL?.replace("/api", "") ||
-    "http://localhost:1337";
+    "https://authentic-virtue-ebbd26e6cd.strapiapp.com";
 
   const displayImage = item.thumbnail?.formats?.small?.url
     ? `${STRAPI_BASE_URL}${item.thumbnail.formats.small.url}`

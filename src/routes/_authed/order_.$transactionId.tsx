@@ -46,7 +46,7 @@ function OrderDetailPage() {
 
   const STRAPI_BASE_URL =
     import.meta.env.VITE_STRAPI_URL?.replace("/api", "") ||
-    "http://localhost:1337";
+    "https://authentic-virtue-ebbd26e6cd.strapiapp.com";
   console.log(order);
   return (
     <div className="p-8 min-h-screen max-w-5xl mx-auto space-y-10 animate-in fade-in duration-500">

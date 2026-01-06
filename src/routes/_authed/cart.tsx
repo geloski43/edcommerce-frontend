@@ -80,7 +80,7 @@ function CartComponent() {
   useEffect(() => {
     const STRAPI_BASE_URL =
       import.meta.env.VITE_STRAPI_URL?.replace("/api", "") ||
-      "http://localhost:1337";
+      "https://authentic-virtue-ebbd26e6cd.strapiapp.com";
 
     if (strapiCurrencies?.length > 0) {
       currencyActions.setAvailableCurrencies(

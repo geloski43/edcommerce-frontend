@@ -1,6 +1,8 @@
 import { strapi } from "@strapi/client";
 
-const API_URL = import.meta.env.VITE_STRAPI_URL || "http://localhost:1337/api";
+const API_URL =
+  import.meta.env.VITE_STRAPI_URL ||
+  "https://authentic-virtue-ebbd26e6cd.strapiapp.com/api";
 const API_TOKEN = import.meta.env.VITE_STRAPI_API_TOKEN;
 
 export const strapiClient = strapi({

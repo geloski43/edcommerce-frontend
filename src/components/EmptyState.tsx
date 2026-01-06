@@ -32,7 +32,7 @@ export default function EmptyState({
       {/*to be replaced for admin users view only*/}
       {actionLabel && actionTo && (
         <a
-          href="http://localhost:1337/admin"
+          href="https://authentic-virtue-ebbd26e6cd.strapiapp.com/admin"
           className="flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-2xl font-bold text-sm hover:opacity-90 transition-all shadow-lg shadow-primary/20"
         >
           <Plus className="w-4 h-4" />
