@@ -1,16 +1,6 @@
 [build]
-  # We use the legacy-peer-deps flag to fix the install error you encountered
-  command = "npm install --legacy-peer-deps && npm run build"
-
-  # Nitro (via TanStack Start) outputs the Netlify functions here
-  publish = ".netlify/functions-internal"
-
+  command = "vite build"
+  dir = "dist/client"
 [dev]
-  command = "npm run dev"
+  command = "vite dev"
   port = 3000
-
-[build.environment]
-  # Ensures Netlify uses a modern Node version required for TanStack Start
-  NODE_VERSION = "20"
-  # Provides the flag to the installer automatically
-  NPM_FLAGS = "--legacy-peer-deps"
