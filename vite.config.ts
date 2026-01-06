@@ -5,6 +5,7 @@ import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import { devtools } from "@tanstack/devtools-vite";
 import netlify from "@netlify/vite-plugin-tanstack-start";
 import neon from "./neon-vite-plugin.ts";
+import react from "@vitejs/plugin-react"; // Add this import
 
 export default defineConfig({
   server: {
@@ -19,6 +20,7 @@ export default defineConfig({
   plugins: [
     // tanstackStart() now replaces the old app.config.ts wrapper
     tanstackStart(),
+    react(), // Add the React plugin here
     devtools(),
     netlify(),
     neon,
