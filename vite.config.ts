@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     // Standard Vite server options work perfectly here
     allowedHosts: [
-      "https://doing-namespace-resist-mai.trycloudflare.com",
+      "https://695cba001d16434c299703be--edcommerceapp.netlify.app",
       ".ngrok-free.app",
       ".tunn.dev",
       ".trycloudflare.com",
