@@ -12,6 +12,7 @@ export default defineConfig({
     // Standard Vite server options work perfectly here
     allowedHosts: [
       "https://edcommerceapp.netlify.app",
+      "https://authentic-virtue-ebbd26e6cd.strapiapp.com",
       ".ngrok-free.app",
       ".tunn.dev",
       ".trycloudflare.com",
