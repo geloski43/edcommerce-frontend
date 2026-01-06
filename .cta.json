@@ -1,0 +1,25 @@
+{
+  "projectName": "edcomm",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "npm",
+  "addOnOptions": {},
+  "git": true,
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": [
+    "biome",
+    "netlify",
+    "start",
+    "clerk",
+    "neon",
+    "strapi",
+    "form",
+    "t3env",
+    "table",
+    "store",
+    "tanstack-query",
+    "sentry"
+  ]
+}
