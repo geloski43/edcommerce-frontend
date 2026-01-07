@@ -66,11 +66,11 @@ function ProductDetailComponent() {
     }).format(convertedPrice);
   };
 
-  // 2. Unpacking Strapi Data Logic
   const STRAPI_BASE_URL =
     import.meta.env.VITE_STRAPI_URL?.replace("/api", "") ||
     "https://authentic-virtue-ebbd26e6cd.strapiapp.com";
 
+  // local src
   const displayImage = item.thumbnail?.formats?.small?.url
     ? `${STRAPI_BASE_URL}${item.thumbnail.formats.small.url}`
     : item.thumbnail?.url
@@ -89,7 +89,7 @@ function ProductDetailComponent() {
       price: item.price || 0,
       productId: item.productId,
       sub_category: item.sub_category?.subCategoryId || item.sub_category,
-      thumbnail: displayImage,
+      thumbnail: item.thumbnail.url,
       details: displayDetails,
       isDigital: item.isDigital,
     });
@@ -102,7 +102,7 @@ function ProductDetailComponent() {
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${item.productId}`;
     window.open(downloadUrl, "_blank");
   };
-
+  console.log(item);
   return (
     <div className="min-h-screen bg-background p-6 lg:p-12">
       <CartBadge />
@@ -120,7 +120,7 @@ function ProductDetailComponent() {
           <div className="relative group">
             <div className="aspect-square rounded-[2.5rem] overflow-hidden border border-border bg-card shadow-2xl">
               <img
-                src={displayImage}
+                src={item.thumbnail.url}
                 alt={item.name}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />

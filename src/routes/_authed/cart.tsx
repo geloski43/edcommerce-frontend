@@ -114,11 +114,13 @@ function CartComponent() {
           sub_category: item.sub_category?.subCategoryId || item.sub_category,
           productId: item.productId,
           hasPurchased: purchasedIds.includes(item.productId),
-          thumbnail: item.thumbnail?.formats?.small?.url
-            ? `${STRAPI_BASE_URL}${item.thumbnail.formats.small.url}`
-            : item.thumbnail?.url
-              ? `${STRAPI_BASE_URL}${item.thumbnail.url}`
-              : "",
+          thumbnail: item.thumbnail?.formats?.small?.url,
+          // local src
+          // item.thumbnail?.formats?.small?.url
+          //   ? `${STRAPI_BASE_URL}${item.thumbnail.formats.small.url}`
+          //   : item.thumbnail?.url
+          //     ? `${STRAPI_BASE_URL}${item.thumbnail.url}`
+          //     : "",
           details: Array.isArray(item.details)
             ? item.details[0]?.children?.[0]?.text
             : item.details,

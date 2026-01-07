@@ -124,7 +124,9 @@ function OrderDetailPage() {
                   <div className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center font-black text-xs border border-border overflow-hidden">
                     {item.product?.thumbnail ? (
                       <img
-                        src={`${STRAPI_BASE_URL}${item.product.thumbnail.url}`}
+                        src={item.product.thumbnail.formats.thumbnail.url}
+                        // local src
+                        // src={`${STRAPI_BASE_URL}${item.product.thumbnail.url}`}
                         alt=""
                         className="w-full h-full object-cover"
                       />

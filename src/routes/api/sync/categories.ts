@@ -8,11 +8,11 @@ export const Route = createFileRoute("/api/sync/categories")({
         const incomingSecret = request.headers.get("x-sync-secret");
         const localSecret = process.env.VITE_SYNC_SECRET;
 
-        // if (!incomingSecret || incomingSecret !== localSecret) {
-        //   return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        //     status: 401,
-        //   });
-        // }
+        if (!incomingSecret || incomingSecret !== localSecret) {
+          return new Response(JSON.stringify({ error: "Unauthorized" }), {
+            status: 401,
+          });
+        }
 
         try {
           const STRAPI_URL = process.env.VITE_STRAPI_URL;
